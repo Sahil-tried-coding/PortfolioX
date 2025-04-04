@@ -37,7 +37,7 @@ const Project = () => {
   };
 
   return (
-    <div className="h-screen w-screen bg-black flex flex-col  ">
+    <div id="projects" className="h-screen w-screen bg-black flex flex-col  ">
       <div className=" flex items-center gap-5 ml-[8rem] mt-[4rem]">
         <div className="w-[115px] h-[4px] bg-[#cb72ff]"></div>
         <h1 className="text-[48px] text-white font-semibold"> Projects</h1>

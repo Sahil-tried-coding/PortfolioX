@@ -27,7 +27,7 @@ const Right = () => {
             animate={{ opacity: 0.5 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.3 }}
-            className="w-[100vw] h-[100vh] fixed bg-black opacity-50 z-[100]"
+            className="w-[100vw] h-[100vh] fixed bg-black opacity-50 -z-50"
           ></motion.div>
         )}
       </AnimatePresence>

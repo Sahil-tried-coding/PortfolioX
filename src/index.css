@@ -4,6 +4,9 @@
 /* @import "tailwindcss"; */
 
 
+html {
+  scroll-behavior: smooth;
+}
 
 @font-face {
   font-family: 'Preahvihear';

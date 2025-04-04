@@ -13,7 +13,7 @@ const Right = () => {
   rotateAmplitude={12}
   scaleOnHover={1.08}
   showMobileWarning={false}
-//   showTooltip={true}
+  showTooltip={true}
   displayOverlayContent={true}
   overlayContent={
     
