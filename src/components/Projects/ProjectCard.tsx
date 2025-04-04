@@ -1,3 +1,4 @@
+import gsap from "gsap";
 import { useState } from "react";
 import { FaCaretRight } from "react-icons/fa";
 // import almost from '../../Assets/Project_Images/almost.png'
@@ -11,23 +12,28 @@ type ProjectProps = {
   img: string;
   techStack: { img: string }[];
   description: string[];
+  githubLink:string,
+  liveLink:string
 };
 
 const ProjectCard: React.FC<ProjectProps> = ({
-  project_index,
   name,
   img,
   techStack,
   description,
   index,
+  liveLink,
+  githubLink
 }) => {
+
+
+  
   return (
     <div
-      className={`project-card shadow-lg rounded-xl shadow-white/10 w-[800px] h-[250px] text-white mx-auto border-2 border-white p-3 
-        ${index == project_index ? "flex" : "hidden"}`}
+      className={`project-card shadow-lg  rounded-xl shadow-white/10 w-[800px] h-[350px] text-white mx-auto border-2 border-sky-500 p-1`} 
         >
-        <div className={` flex`}>
-        <div className="text-base flex flex-col gap-4">
+        <div className={` flex items-center justify-center h-full gap-5`}>
+        <div className="text-base flex flex-col gap-4 justify-center p-2 w-[60%]">
         <h1 className="text-2xl font-semibold">{name}</h1>
           <h1 className="flex gap-2">
             <FaCaretRight />
@@ -46,17 +52,20 @@ const ProjectCard: React.FC<ProjectProps> = ({
               ))}
             </div>
             <div className="flex h-[60px] items-center gap-3 cursor-pointer">
+              <a href={githubLink}>
               <img
-                className="w-[40px] h-[40px]"
-                src="https://imgs.search.brave.com/8l5PYSD5tmQ_w6xAPJPHZ3U_DnQoBcHJdf7080H6JAA/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9yZWdp/c3RyeS5ucG1taXJy/b3IuY29tL0Bsb2Jl/aHViL2ljb25zLXN0/YXRpYy1wbmcvbGF0/ZXN0L2ZpbGVzL2Rh/cmsvZ2l0aHViLnBu/Zw"
-              />
-              <RxLink1 className="w-[40px] h-[60px] text-white" />
+              
+              className="w-[40px] h-[40px]"
+              src="https://imgs.search.brave.com/8l5PYSD5tmQ_w6xAPJPHZ3U_DnQoBcHJdf7080H6JAA/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9yZWdp/c3RyeS5ucG1taXJy/b3IuY29tL0Bsb2Jl/aHViL2ljb25zLXN0/YXRpYy1wbmcvbGF0/ZXN0L2ZpbGVzL2Rh/cmsvZ2l0aHViLnBu/Zw"
+            />
+              </a>
+              <a href={liveLink}><RxLink1  className="w-[40px] h-[60px] text-white" /></a>
             </div>
           </div>
         </div>
         
-        <div className="">
-          <img className=" -rotate-2 h-[200px]" src={img} />
+        <div className="px-2">
+          <img className=" border-2 border-white -rotate-2 h-[180px]" src={img} />
         </div>
       </div>
     </div>
