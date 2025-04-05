@@ -14,7 +14,7 @@ const Welcome: React.FC<WelcomeProps> = ({
   const [welcomeMessage, setWelcomeMessage] = useState<string>("");
   const [index, setIndex] = useState<number>(0);
   const ref = useRef<any>(null); // Reference for the loading bar
-  
+
   const languages: string[] = [
     "Hello",
     "السلام عليكم",
@@ -33,9 +33,9 @@ const Welcome: React.FC<WelcomeProps> = ({
       if (index < languages.length) {
         setWelcomeMessage(languages[index]);
         setIndex((prevIndex) => prevIndex + 1);
-        ref.current.continuousStart(); 
+        ref.current.continuousStart();
       } else {
-        ref.current.complete(); 
+        ref.current.complete();
         setAnimationCompleted(true);
       }
     }, 500);
@@ -45,7 +45,7 @@ const Welcome: React.FC<WelcomeProps> = ({
 
   return (
     <div>
-      <LoadingBar color="#FF8709" ref={ref} />
+      <LoadingBar color="#B56FFA" ref={ref} />
       <AnimatePresence>
         {!animationCompleted && (
           <motion.div

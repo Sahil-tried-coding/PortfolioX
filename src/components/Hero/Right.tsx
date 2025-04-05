@@ -4,7 +4,7 @@ import TiltedCard from '../ui/TIltedCard'
 
 const Right = () => {
   return (
-    <div className="relative  lg:h-[600px] flex items-center justify-center font-semibold">
+    <div className="relative  lg:h-[600px] flex items-center justify-center font-semibold mr-20 sm:mr-0">
                 <div className="absolute inset-0 bg-gradient-to-r from-purple-500/20 to-pink-500/20 blur-3xl" />
 
                 <TiltedCard

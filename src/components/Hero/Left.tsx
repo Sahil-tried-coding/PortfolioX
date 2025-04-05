@@ -4,21 +4,21 @@ import { Button } from "../ui/button";
 const Left = () => {
   return (
     // <div className="w-[50%]   border-2 border-white">
-      <div className="w-[716px] px-[16px] py-[24px] flex flex-col ">
-        <div className="flex gap-[11px] items-center">
-          <div className="text-[#B56FFA] text-[96px]">Virtual</div>
-          <div className="text-white text-[20px]">
+      <div className="w-full items-center sm:justify-normal justify-center  sm:w-[716px] px-[16px] sm:py-[64px] flex flex-col gap-6 sm:gap-20">
+        <div className="flex gap-6 sm:gap-[11px] items-center">
+          <div className="text-[#B56FFA] text-5xl sm:text-[96px]">Virtual</div>
+          <div className="text-white text-[12px] sm:text-[20px]">
             //Based in Shirdi , India
           </div>
         </div>
         <div className="flex items-center justify-center">
-          <div className="text-[#E8B500] text-center text-[96px]">Curious</div>
+          <div className="text-[#E8B500] sm:text-center text-5xl sm:text-[96px]">Curious</div>
           
         </div>
         <div className="flex gap-[48px] items-center">
-          <div className="text-[#6EE7B7]  text-[96px]">Designer</div>
+          <div className="text-[#6EE7B7]  text-5xl sm:text-[96px]">Designer</div>
           <button
-                  className="overflow-hidden relative w-32 p-2 h-12 bg-gray-600 text-white border-none rounded-md text-xl font-bold cursor-pointer group"
+                  className="overflow-hidden relative w-24 whitespace-nowrap sm:w-32 p-2  sm:h-12 bg-gray-600 text-white border-none rounded-md text-sm sm:text-xl font-bold cursor-pointer group"
                   
                 >
                   Hover me!
@@ -30,8 +30,8 @@ const Left = () => {
                   </span>
                 </button>
         </div>
-        <div className="flex items-center justify-end">
-          <div className="text-[#FF7A00] text-center text-[96px] flex gap-[24px]"><span className="text-white ">&</span>
+        <div className="flex items-center justify-center">
+          <div className="text-[#FF7A00] text-center text-5xl sm:text-[96px] flex gap-[24px]"><span className="text-white ">&</span>
           Developer
           </div>
           
