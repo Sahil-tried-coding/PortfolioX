@@ -1,11 +1,9 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { BiLeftArrow, BiRightArrow } from "react-icons/bi";
 import { Data } from "./Data";
 import left from '../../Assets/Images/right-arrow.png'
 import right from '../../Assets/Images/left-arrow.png'
 import ProjectCard from "./ProjectCard";
-import { Button } from "../ui/button";
 
 const Project = () => {
   const [index, setIndex] = useState(0);

@@ -1,7 +1,5 @@
 import { useState } from "react";
 import { Link } from "react-scroll";
-import { RxCross1 } from "react-icons/rx";
-import { FaBars } from "react-icons/fa";
 
 const navItems = [
   { name: "About", color: "#B56FFA", link: "about" },

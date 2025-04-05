@@ -1,5 +1,3 @@
-import React from 'react'
-import { Data } from './Data'
 import SkillCard from './SkillCard';
 import './../Skills/Skill.css'
 import SpotlightCard from '../ui/SpotlightCard';

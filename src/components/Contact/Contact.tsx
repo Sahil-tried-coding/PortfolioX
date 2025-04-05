@@ -1,14 +1,8 @@
-import { XIcon } from "lucide-react";
-import { FaInstagramSquare, FaLinkedin } from "react-icons/fa";
-import { LiaLinkedin } from "react-icons/lia";
-import { RiGithubFill } from "react-icons/ri";
 import downarrow from "../../Assets/Images/down-op.png";
 
-import insta from "../../Assets/Images/insta.webp";
 import linkdin from "../../Assets/Images/linkdin-op.webp";
 import x from "../../Assets/Images/x-opp.png";
 import github from "../../Assets/Images/github.webp";
-import { IoLogoLinkedin } from "react-icons/io";
 
 const Contact = () => {
   return (
