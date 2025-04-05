@@ -22,12 +22,13 @@ const SpotlightCard = ({
     setPosition({ x: e.clientX - rect.left, y: e.clientY - rect.top });
   };
 
-  const handleFocus = (e: FocusEvent<HTMLDivElement>) => {
+  const handleFocus = () => {
     setIsFocused(true);
     setOpacity(0.6);
   };
 
-  const handleBlur = (e: FocusEvent<HTMLDivElement>) => {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const handleBlur = () => {
     setIsFocused(false);
     setOpacity(0);
   };
