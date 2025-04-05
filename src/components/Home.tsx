@@ -3,7 +3,7 @@ import Navbar from "./Navbar"
 
 const Home = () => {
   return (
-    <div className="h-screen w-screen overflow-x-hidden">
+    <div className="max-h-max w-screen overflow-x-hidden">
         <Navbar/>
         <HeroSection/>
     </div>

@@ -10,36 +10,31 @@ interface SkillProps {
 const SkillCard: React.FC<SkillProps> = ({ name, icon, level, color }) => {
   return (
     <div
-      className="relative  flex flex-col p-4 gap-3 items-center justify-between w-full h-[150px] rounded-xl  transition-all duration-300 "
+      className="relative   flex flex-col p-3 sm:p-4  sm:gap-3 items-center justify-between w-full h-[150px] rounded-xl overflow-hidden"
       style={{
-        // border:2,
-        // borderColor:color,
-        // background: color,  // Make it more transparent
-        backdropFilter: "blur(25px)",  // More blur for strong glass effect
-        WebkitBackdropFilter: "blur(25px)",
+        border: `2px solid ${color} `,
+        borderColor:color,
+        backdropFilter: "blur(20px)",
+        WebkitBackdropFilter: "blur(20px)",
         borderRadius: "15px",
-        border: `2px solid ${color}`,  // Thin white border
-        // boxShadow: `0px 8px 20px rgba(255, 255, 255, 0.2), 
-        //             inset 0px 4px 8px rgba(0, 0, 0, 0.2)`,  // Stronger glow
+        backgroundColor: "rgba(255, 255, 255, 0.03)",
       }}
     >
-      {/* Skill Icon */}
-      <img src={icon} alt={name} className="w-[5rem] h-[5rem]" />
+      {/* Balanced Radial Glow */}
+      <div
+        className="absolute inset-0 z-0 pointer-events-none"
+        style={{
+          background: `radial-gradient(circle at 50% 40%, ${color} 12%, transparent 60%)`,
+          opacity: 0.4,
+          filter: `blur(6px)`,
+        }}
+      />
 
-      {/* Skill Name */}
-      <h3 className="text-white text-lg font-semibold">{name}</h3>
-
-      {/* Progress Bar with Glow */}
-      {/* <div className="w-full h-2 bg-gray-700 rounded-full overflow-hidden relative">
-        <div
-          className="h-2 rounded-full transition-all duration-500 absolute"
-          style={{
-            width: `${level}%`,
-            backgroundColor: color,
-            boxShadow: `0px 0px 12px ${color}`,  // Neon Glow effect
-          }}
-        ></div>
-      </div> */}
+      {/* Foreground Content */}
+      <div className="relative z-10 flex flex-col items-center gap-3">
+        <img src={icon} alt={name} className="hover:scale-105 transition-all ease-in  w-[5rem] h-[5rem]" />
+        <h3 className="text-white text-lg font-semibold">{name}</h3>
+      </div>
     </div>
   );
 };
