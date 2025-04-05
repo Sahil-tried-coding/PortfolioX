@@ -7,7 +7,7 @@ import ProjectCard from "./ProjectCard";
 
 const Project = () => {
   const [index, setIndex] = useState(0);
-  const [direction, setDirection] = useState(0); // for animation direction
+  const [, setDirection] = useState(0); // for animation direction
 
   const handleNext = () => {
     setDirection(1);
@@ -19,20 +19,20 @@ const Project = () => {
     setIndex((prev) => (prev - 1 + Data.length) % Data.length);
   };
 
-  const variants = {
-    enter: (dir: number) => ({
-      x: dir > 0 ? 300 : -300,
-      opacity: 0,
-    }),
-    center: {
-      x: 0,
-      opacity: 1,
-    },
-    exit: (dir: number) => ({
-      x: dir > 0 ? -300 : 300,
-      opacity: 0,
-    }),
-  };
+  // const variants = {
+  //   enter: (dir: number) => ({
+  //     x: dir > 0 ? 300 : -300,
+  //     opacity: 0,
+  //   }),
+  //   center: {
+  //     x: 0,
+  //     opacity: 1,
+  //   },
+  //   exit: (dir: number) => ({
+  //     x: dir > 0 ? -300 : 300,
+  //     opacity: 0,
+  //   }),
+  // };
 
   return (
     <div id="projects" className="max-h-max w-screen bg-black flex flex-col  ">

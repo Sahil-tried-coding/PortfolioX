@@ -7,7 +7,6 @@ const Right = () => {
                 <div className="absolute inset-0 bg-gradient-to-r from-purple-500/20 to-pink-500/20 blur-3xl" />
 
                 <TiltedCard
-                clas
 
   rotateAmplitude={12}
   scaleOnHover={1.08}

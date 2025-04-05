@@ -1,5 +1,19 @@
-import { useRef, useState } from "react";
+import { ReactNode, useRef, useState } from "react";
 import { motion, useMotionValue, useSpring } from "framer-motion";
+
+type TiltedCardProps = {
+  captionText?: string;
+  containerHeight?: string;
+  containerWidth?: string;
+  imageHeight?: string;
+  imageWidth?: string;
+  scaleOnHover?: number;
+  rotateAmplitude?: number;
+  showMobileWarning?: boolean;
+  showTooltip?: boolean;
+  overlayContent?: ReactNode;
+  displayOverlayContent?: boolean;
+};
 
 const springValues = {
   damping: 30,
@@ -8,8 +22,6 @@ const springValues = {
 };
 
 export default function TiltedCard({
-//   imageSrc,
-  // altText = "Tilted card image",
   captionText = "",
   containerHeight = "300px",
   containerWidth = "100%",
@@ -21,8 +33,8 @@ export default function TiltedCard({
   showTooltip = true,
   overlayContent = null,
   displayOverlayContent = false,
-}) {
-  const ref = useRef(null);
+}: TiltedCardProps) {
+  const ref = useRef<HTMLDivElement>(null);
   const x = useMotionValue(0);
   const y = useMotionValue(0);
   const rotateX = useSpring(useMotionValue(0), springValues);
@@ -37,10 +49,10 @@ export default function TiltedCard({
 
   const [lastY, setLastY] = useState(0);
 
-  function handleMouse(e) {
+  function handleMouse(e: React.MouseEvent<HTMLDivElement>) {
     if (!ref.current) return;
+    const rect = (ref.current as HTMLDivElement).getBoundingClientRect();
 
-    const rect = ref.current.getBoundingClientRect();
     const offsetX = e.clientX - rect.left - rect.width / 2;
     const offsetY = e.clientY - rect.top - rect.height / 2;
 
@@ -99,20 +111,8 @@ export default function TiltedCard({
           scale,
         }}
       >
-        {/* <motion.img
-        //   src={imageSrc}
-          // alt={altText}
-          className="absolute top-0 left-0 object-cover rounded-[15px] will-change-transform [transform:translateZ(0)]"
-          style={{
-            width: imageWidth,
-            height: imageHeight,
-          }}
-        /> */}
-
         {displayOverlayContent && overlayContent && (
-          <motion.div
-            className="absolute top-0 left-0 z-[2] will-change-transform [transform:translateZ(30px)]"
-          >
+          <motion.div className="absolute top-0 left-0 z-[2] will-change-transform [transform:translateZ(30px)]">
             {overlayContent}
           </motion.div>
         )}

@@ -1,11 +1,5 @@
-import gsap from "gsap";
-import { CircleArrowLeft, CircleArrowRight } from "lucide-react";
-import { useState } from "react";
-import { FaCaretRight } from "react-icons/fa";
-// import almost from '../../Assets/Project_Images/almost.png'
+import {  CircleArrowRight } from "lucide-react";
 import { RxLink1 } from "react-icons/rx";
-// import gsap from 'gsap'
-// import almost from '../../Assets/Project_Images/Screenshot 2025-04-03 023253.png'
 
 type ProjectProps = {
   index: number;
@@ -22,7 +16,6 @@ const ProjectCard: React.FC<ProjectProps> = ({
   img,
   techStack,
   description,
-  index,
   liveLink,
   githubLink
 }) => {
@@ -37,14 +30,12 @@ const ProjectCard: React.FC<ProjectProps> = ({
         <div className="text-base flex flex-col gap-4 justify-center p-2 sm:w-[60%] h-[200px]">
         <h1 className="text-2xl font-semibold">{name}</h1>
           <h1 className="flex  gap-2">
-            {/* <FaCaretRight />
-             */}
+            
              <CircleArrowRight/>
             {description[0]}
           </h1>
           <h1 className="flex gap-2">
              <CircleArrowRight/>
-          {/* <FaCaretRight className="font-bold" /> */}
             {description[1]}
           </h1>
           

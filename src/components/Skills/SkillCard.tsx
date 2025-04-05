@@ -2,11 +2,10 @@
 interface SkillProps {
   name: string;
   icon: string;
-  level: number;
   color: string;
 }
 
-const SkillCard: React.FC<SkillProps> = ({ name, icon, level, color }) => {
+const SkillCard: React.FC<SkillProps> = ({ name, icon, color }) => {
   return (
     <div
       className="relative   flex flex-col p-3 sm:p-4  sm:gap-3 items-center justify-between w-full h-[150px] rounded-xl overflow-hidden"
